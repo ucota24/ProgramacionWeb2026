@@ -10,10 +10,22 @@
 ##### Turno: Matutino
 ##### Edad: 21 años
 
-## Listas
-1. lista1
-3. lista2
-4. lista3
+## Fundamentos de la Web
+1. Ejercicio 1 - ¿Cómo se inventó el Internet? 
+2. Ejercicio 2 - ¿Qué es Internet?   
+3. Ejercicio 3 - Markdown  
+
+## HTML
+
+## CSS
+
+## JavaScript
+
+## Servidores
+
+## Programación del lado del Servidor
+
+## Proyecto Final 
 
 ## Trabajos
 
