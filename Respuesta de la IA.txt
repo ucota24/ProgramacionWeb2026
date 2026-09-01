@@ -1,0 +1,34 @@
+# ProgramacionWeb2026
+### Repositorio de tareas y proyectos del semestre
+
+## Descripción
+En este repositorio se irán añadiendo tareas y trabajos realizados durante el semestre en la materia de Programación Web.
+
+## Información personal
+- **Nombre:** Uriel Santiago Cota Posada  
+- **Carrera:** Ingeniería en Desarrollo de Software  
+- **Semestre:** Quinto semestre  
+- **Turno:** Matutino  
+- **Edad:** 21 años  
+
+## Listas
+1. Lista 1  
+2. Lista 2  
+3. Lista 3  
+
+- Elemento A  
+- Elemento B  
+- Elemento C  
+
+## Imagen
+![Logo UABCS](https://www.uabcs.mx/assets/images/logo_gray.png)
+
+## Enlace
+[Markdown Live Preview](https://markdownlivepreview.com/)
+
+## Tabla de ejemplo
+| Actividad | Estado |
+|-----------|--------|
+| Tarea 1   | ✅     |
+| Tarea 2   | ⏳     |
+| Tarea 3   | ❌     |
