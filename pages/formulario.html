@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="/procesar-formulario" method="POST">
+
+        <fieldset>
+            <legend>Información personal</legend><br>
+
+            <div>
+                <label for="inp-nombre">Nombre:</label>
+                <input type="text" id="inp-nombre" name="nombre" required 
+                minlength="2" maxlength="30"><br><br><br>
+            </div>
+
+            <div>
+                <label for="inp-apellido">Apellido:</label>
+                <input type="text" id="inp-apellido" name="apellido" required><br><br><br>
+            </div>
+
+            <div>
+                <label for="inp-correo">Correo electrónico:</label>
+                <input type="email" id="inp-correo" name="correo" required
+                 placeholder="ejemplo@correo.com"><br><br><br>
+            </div>
+
+            <div>
+                <label for="inp-contrasena">Contraseña:</label>
+                <input type="password" id="inp-contrasena" name="contrasena" required
+                 minlength="8" placeholder="Mínimo 8 caracteres"><br><br><br>
+            </div>
+
+            <div>
+                <label for="inp-telefono">Teléfono:</label>
+                <input type="tel" id="inp-telefono" name="telefono" required
+                pattern="[0-9]{10}"><br><br><br>
+            </div>
+
+            <div>
+                <label for="inp-fnacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="inp-fnacimiento" name="fnacimiento" required
+                 min="1950-01-01" max="2016-12-31"><br><br>
+            </div>
+        </fieldset> <br><br>
+
+        <input type="submit" value="Confirmar">
+    
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>

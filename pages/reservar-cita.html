@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita</title>
+</head>
+
+<body>
+    <h1>Reservar Cita</h1>
+        <form action="/procesar-cita" method="POST">
+
+            <fieldset>
+                <legend>Rellena lo siguiente para reservar tu cita!</legend><br>
+                <div>
+                    <label for="select-barbero">Barberos disponibles:</label>
+                    <select id="select-barbero" name="barbero" required>
+                        <option value="" disabled selected>Elige tu barbero</option>
+                        <option value="angeltorres">Angel Torres</option>
+                        <option value="robertoaguilar">Roberto Aguilar</option>
+                        <option value="lunaramirez">Luis Ramirez</option>
+                        <option value="alexismendoza">Alexis Mendoza</option>
+                        <option value="victorsalgado">Victor Salgado</option>
+                        <option value="mariocardenas">Mario Cardenas</option>
+                    </select><br><br><br>
+                </div>
+                
+                <div>
+                    <label for="select-servicio">Servicio:</label>
+                    <select id="select-servicio" name="servicio" required>
+                        <option value="" disabled selected>Elige tu servicio</option>
+                        <option value="cnormal">Corte normal</option>
+                        <option value="cnino">Corte de niño</option>
+                        <option value="pbarba">Perfilado de barba</option>
+                        <option value="mnegra">Mascara negra</option>
+                        <option value="efacial">Exfoliación facial</option>
+                        <option value="pcompleto">Paquete pepe's</option>
+                    </select><br><br><br>
+                </div>
+
+                <div>
+                    <label for="inp-horario">Horario disponible:</label>
+                    <input type="date" id="inp-horario" name="horario" required
+                    min="2026-09-15" max="2026-12-31"><br><br>
+                </div>
+            </fieldset><br><br>
+
+            <input type="submit" value="Confirmar">
+        </form>
+
+
+
+
+
+    
+</body>
+</html>
