@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display:swap;
+}
+

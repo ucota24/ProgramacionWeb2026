@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tu lugar de confianza para cortes de cabello y cuidado personal. Reserva tu cita en línea y disfruta de un servicio profesional en Pepe's Barberia.">
     <link rel="icon" type="image/jpeg" href="assets/icon/logo.jpg">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <meta property="og:title" content="Pepe's Barberia">
     <meta property="og:description" content="Tu lugar de confianza para cortes de cabello y cuidado personal. Reserva tu cita en línea.">
@@ -15,42 +15,6 @@
     <meta property="og:type" content="website">
     <title>Pepe's Barberia | Cortes clasicos y Arreglo de barba!</title>
 
-    <style>
-
-        body {
-            background-color: rgb(226, 226, 226);
-        }
-        h1 {
-            color: brown;
-            font-family: 'Roboto', sans-serif;
-            font-size: 40px;
-            text-align: center;
-        }
-
-        ul {
-            color:blue;
-            padding: 0;
-            font-family: 'Roboto', sans-serif
-        }
-
-        .corte-clasico {
-            color: brown;
-        }
-
-        .ajuste-barba {
-            color: brown;
-        }
-
-        .limpieza-facial {
-            color: brown;
-        }
-
-        #pregunta-corte {
-            color: brown;
-            font-size: 25px;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -70,28 +34,32 @@
     </header>
 
     <main>  
-        <section>
-            <h2 id="pregunta-corte" style="color: brown;">¿Quieres un corte impecable sin esperar?</h2>
+        <section id="reservar">
+            <h2 class="pregunta-corte">¿Quieres un corte impecable sin esperar?</h2>
             <p>Agenda tu visita en minutos y asegura tu lugar con nuestros barberos profesionales.</p>
             <a href="pages/reservar-cita.html"><button><strong>Reservar</strong></button></a>
         </section>
 
+<br><br><br><br><br><br><br><br><br><br>
+
         <section id="servicios">
-            <article>
-                <h3 class="corte-clasico">Corte Clasico</h3>
+            <article class="corte-clasico">
+                <h3>Corte Clasico</h3>
                 <p>Un corte preciso adaptado a tu estilo y tipo de cabello.</p>
             </article>
             
-            <article>
-                <h3 class="ajuste-barba">Ajuste de barba</h3>
+            <article class="ajuste-barba">
+                <h3>Ajuste de barba</h3>
                 <p>Perfilado y cuidado de barba con productos premium.</p>
             </article>
 
-            <article>
-                <h3 class="limpieza-facial">Limpieza facial</h3>
+            <article class="limpieza-facial">
+                <h3>Limpieza facial</h3>
                 <p>Tratamiento facial para reavilitar y limpiar tu piel</p>
             </article>
         </section>
+
+<br><br><br><br><br><br><br><br><br><br>
 
         <aside>    
             <h3>Pepe's Barberia</h3>
@@ -103,7 +71,7 @@
     </main>
 
     <hr>
-    <footer>
+    <footer id="derechos">
         <p>Pepe's Barberia 2026.  Derechos reservados.</p>
         <p>Version 1.0</p>
     </footer>

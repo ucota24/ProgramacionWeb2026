@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: Roboto_Condensed;
+    src: url('../fonts/Roboto_Condensed-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display:swap;
+}
+
+
+body {
+    background-color: rgba(36, 36, 36, 0.747);
+    font-family: Roboto_Condensed, sans-serif;
+    color: white;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+nav {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#reservar {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.corte-clasico {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.ajuste-barba {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.limpieza-facial {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+#derechos {
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+
+
+
+
+
