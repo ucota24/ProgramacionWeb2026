@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../assets/img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#reservar {
+    margin-top: 20px; 
+    padding: 100px 10px;
+}
+
+#servicios {
+    margin-top: 150px;
+    text-align: center;
+}
+
+#info-barberia {
+    margin-top: 150px;
+}
+
+.reservar-boton {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 30px;
+    background-color: rgba(143, 143, 143, 0.897);
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgba(150, 150, 150, 0.7);
+    border-radius: 8px;
+}
+
+.corte-clasico {
+    display: inline-block;
+    width: 280px;
+    max-width: 100%;
+    margin: 12px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+
+.card-image-corte-clasico {
+    display: block;
+    width: 100%;
+    height: 230px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ajuste-barba {
+    display: inline-block;
+    width: 280px;
+    max-width: 100%;
+    margin: 12px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+
+.card-image-ajuste-barba {
+    display: block;
+    width: 100%;
+    height: 230px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.limpieza-facial {
+    display: inline-block;
+    width: 280px;
+    max-width: 100%;
+    margin: 12px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+
+.card-image-limpieza-facial {
+    display: block;
+    width: 100%;
+    height: 230px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
