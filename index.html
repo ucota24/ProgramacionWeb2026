@@ -20,16 +20,15 @@
 
 <body>
     <header>
-        <h1>Pepe's Barberia</h1>
         <nav class="menu">
             <ul class="menu__lista">
                 <li><a class="menu__enlace" href="index.html">Inicio</a></li>
                 <li><a class="menu__enlace" href="#servicios">Servicios</a></li>
-                <li><a class="menu__enlace" href="pages/galeria.html">Galería</a></li>
+                <!-- <li><a class="menu__enlace" href="pages/galeria.html">Galería</a></li> -->
+                <li><h1 class="menu__titulo">Pepe's Barberia</h1></li>
                 <li><a class="menu__enlace" href="pages/sucursales.html">Sucursales</a></li>
                 <li><a class="menu__enlace" href="pages/registrate.html">Regístrate</a></li>
-                <li><a class="menu__enlace" href="pages/multimedia.html">Multimedia</a></li>
-                <li><a class="menu__enlace" href="pages/formulario.html">Formulario</a></li>
+                <!-- <li><a class="menu__enlace" href="pages/formulario.html">Formulario</a></li> -->
             </ul>
         </nav>
     </header>
@@ -60,20 +59,42 @@
                 <p>Tratamiento facial para reavilitar y limpiar tu piel.</p>
             </article>
         </section>
-
-        <aside id="info-barberia">    
-            <h3>Pepe's Barberia</h3>
-            <p>Lunes a Sabado | <strong>9:00 AM - 7:00 PM</strong></p>
-            <p>Telefono | <strong>+52 612 543 2352</strong></p>
-            <p> <strong>Blvd. Forjadores 3121, colonia Las Garzas, <br> 23050, La Paz, B.C.S., Mexico</strong></p>
-        </aside>
-
     </main>
 
-    <hr>
-    <footer id="derechos">
-        <p>Pepe's Barberia 2026.  Derechos reservados.</p>
-        <p>Version 1.0</p>
+    <aside class="info-barberia">
+        <img class="info-barberia__mapa" src="assets/img/mapa.jpg" alt="Mapa de ubicacion de Pepe's Barberia"> 
+
+        <section class="info-barberia__datos">
+            <h3 class="info-barberia__titulo">Pepe's Barberia</h3>
+
+            <p class="info-barberia__dato">
+                <span class="info-barberia__etiqueta">Horario:</span>
+                Lunes a Sabado | 9:00 AM - 7:00 PM
+            </p>
+            
+            <p class="info-barberia__dato">
+                <span class="info-barberia__etiqueta">Telefono:</span>
+                +52 612 543 2352
+            </p>
+
+            <p class="info-barberia__dato">
+                <span class="info-barberia__etiqueta">Direccion:</span>
+                Blvd. Forjadores 3121, colonia Las Garzas, 23050, La Paz, B.C.S., Mexico
+            </p>
+
+        </section>
+    </aside>
+
+    <footer class="pie">
+        <img class="pie__logo" src="assets/icon/logo.jpg" alt="Logo de Pepe's Barberia">
+        <ul class="pie__lista">
+            <li class="pie__item"> La Paz, Baja California Sur.</li>
+            <li class="pie__item">Tel: +52 612 543 2352</li>
+            <li class="pie__item">Correo: pepesbarber@gmail.com</li>
+        </ul>
+
+        <p class="pie__texto">Pepe's Barberia 2026.  Derechos reservados.</p>
+        <p class="pie__texto">Version 1.0</p>
     </footer>
 
 </body>
