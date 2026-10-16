@@ -4,55 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="../assets/icon/logo.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/box-model.css">
+    <link rel="stylesheet" href="../css/reservar-cita.css">
+
     <title>Reservar Cita</title>
 </head>
 
 <body>
-    <h1>Reservar Cita</h1>
-        <form action="/procesar-cita" method="POST">
+    <main>
+    <h1 class="reservar__titulo">Servicios Disponibles</h1>
 
-            <fieldset>
-                <legend>Rellena lo siguiente para reservar tu cita!</legend><br>
-                <div>
-                    <label for="select-barbero">Barberos disponibles:</label>
-                    <select id="select-barbero" name="barbero" required>
-                        <option value="" disabled selected>Elige tu barbero</option>
-                        <option value="angeltorres">Angel Torres</option>
-                        <option value="robertoaguilar">Roberto Aguilar</option>
-                        <option value="lunaramirez">Luis Ramirez</option>
-                        <option value="alexismendoza">Alexis Mendoza</option>
-                        <option value="victorsalgado">Victor Salgado</option>
-                        <option value="mariocardenas">Mario Cardenas</option>
-                    </select><br><br><br>
-                </div>
-                
-                <div>
-                    <label for="select-servicio">Servicio:</label>
-                    <select id="select-servicio" name="servicio" required>
-                        <option value="" disabled selected>Elige tu servicio</option>
-                        <option value="cnormal">Corte normal</option>
-                        <option value="cnino">Corte de niño</option>
-                        <option value="pbarba">Perfilado de barba</option>
-                        <option value="mnegra">Mascara negra</option>
-                        <option value="efacial">Exfoliación facial</option>
-                        <option value="pcompleto">Paquete pepe's</option>
-                    </select><br><br><br>
-                </div>
+    <ul class="reservar__lista">
 
-                <div>
-                    <label for="inp-horario">Horario disponible:</label>
-                    <input type="date" id="inp-horario" name="horario" required
-                    min="2026-09-15" max="2026-12-31"><br><br>
-                </div>
-            </fieldset><br><br>
+        <li class="reservar__item">
+            <input class="servicio__radio" type="radio" id="servicio-corte-normal" name="servicio" value="corte-normal">
+            <label class="servicio" for="servicio-corte-normal">
+                <span class="servicio__nombre">Corte normal</span>
+                <span class="servicio__detalle">45 minutos | 250 $</span>
+            </label>
+        </li>
+        
+        <li class="reservar__item">
+            <input class="servicio__radio" type="radio" id="servicio-arreglo-barba" name="servicio" value="arreglo-barba">
+            <label class="servicio" for="servicio-arreglo-barba">
+                <span class="servicio__nombre">Arreglo de barba</span>
+                <span class="servicio__detalle">30 minutos | 200 $</span>
+            </label>
+        </li>
 
-            <input type="submit" value="Confirmar">
-        </form>
+        <li class="reservar__item">
+            <input class="servicio__radio" type="radio" id="servicio-corte-nino" name="servicio" value="corte-nino">
+            <label class="servicio" for="servicio-corte-nino">
+                <span class="servicio__nombre">Corte de niño</span>
+                <span class="servicio__detalle">30 minutos | 150 $</span>
+            </label>
+        </li>
 
+        <li class="reservar__item">
+                <input class="servicio__radio" type="radio" id="servicio-mascara-negra" name="servicio" value="mascara-negra">
+                <label class="servicio" for="servicio-mascara-negra">
+                    <span class="servicio__nombre">Mascara negra</span>
+                    <span class="servicio__detalle">15 minutos | 100 $</span>
+                </label>
+            </li>
 
+            <li class="reservar__item">
+                <input class="servicio__radio" type="radio" id="servicio-exfoliacion-facial" name="servicio" value="exfoliacion-facial">
+                <label class="servicio" for="servicio-exfoliacion-facial">
+                    <span class="servicio__nombre">Exfoliación facial</span>
+                    <span class="servicio__detalle">15 minutos | 200 $</span>
+                </label>
+            </li>
 
+            <li class="reservar__item">
+                <input class="servicio__radio" type="radio" id="servicio-corte-barba" name="servicio" value="corte-barba">
+                <label class="servicio" for="servicio-corte-barba">
+                    <span class="servicio__nombre">Corte normal + Arreglo de barba</span>
+                    <span class="servicio__detalle">1 hora 15 minutos | 420 $</span>
+                </label>
+            </li>
 
+            <li class="reservar__item">
+                <input class="servicio__radio" type="radio" id="servicio-corte-mascara" name="servicio" value="corte-mascara">
+                <label class="servicio" for="servicio-corte-mascara">
+                    <span class="servicio__nombre">Corte normal + Mascara negra</span>
+                    <span class="servicio__detalle">1 hora 15 minutos | 350 $</span>
+                </label>
+            </li>
 
+            <li class="reservar__item">
+                <input class="servicio__radio" type="radio" id="servicio-paquete-pepes" name="servicio" value="paquete-pepes">
+                <label class="servicio" for="servicio-paquete-pepes">
+                    <span class="servicio__nombre">Paquete Pepe's</span>
+                    <span class="servicio__detalle">1 hora 30 minutos | 500 $ | <a class="servicio__enlace" href="#">Detalles</a></span>
+                </label>
+            </li>
+        </ul>
+
+    <aside class="panel__lateral">
+        <section class="barberia">
+            <img class="barberia__logo" src="../assets/icon/logo-2.jpg" alt="Logo de Pepe's Barberia">
+            <h2 class="barberia__nombre">Pepe's Barberia</h2>
+
+            <p class="barberia__resenas"> 4.7
+                <span class="barberia__estrellas" role="img" aria-label="4.7 de 5 estrellas">★★★★☆</span> 
+                1,389 reseñas
+            </p>
+
+            <p class="barberia__direccion">Allende 1560, colonia Perla, C.P. 23040</p>
+        </section>
+
+        <section class="resumen">
+            <h2 class="resumen__titulo">Resumen</h2>
+
+            <ul class="resumen__lista">
+                 <li class="resumen__item">
+                    <span class="resumen__corte">Corte Normal</span>
+                    <span class="resumen__detalle">45 minutos | 250 $</span>
+                </li>
+            </ul>
+         </section>
+         <button class="lateral__continuar" type="button">Continuar</button>
+
+    </aside>
     
+    </main>
 </body>
 </html>
