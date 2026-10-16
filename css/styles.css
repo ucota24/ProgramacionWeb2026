@@ -47,7 +47,7 @@ body {
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
-    padding: 7px 20px;
+    padding: 7px max(20px, 4vw);
 }
 
 .menu__lista {

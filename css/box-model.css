@@ -3,6 +3,7 @@
     --espaciado-c: 24px;
     --espaciado-m: 40px;
     --espaciado-g: 60px;
+    --espaciado-eg: calc(var(--espaciado-g) * 1.5);
     --radio-borde: 9px;
     --sombra-card: 0 4px 12px rgba(0, 0, 0, 1);
     --color-blanco: rgb(255, 255, 255);
@@ -107,7 +108,7 @@ footer {
 .card__imagen {
     display: block;
     width: 100%;
-    height: 230px;
+    height: min(230px, 50vw);
     margin-bottom: 12px;
     object-fit: cover;
     border-radius: 4px;
@@ -237,7 +238,7 @@ footer {
  
     #servicios {
         padding: var(--espaciado-g) var(--espaciado-m);
-        gap: var(--espaciado-m) 90px;
+        gap: var(--espaciado-m) var(--espaciado-eg);
     }
  
     .servicios__titulo {
