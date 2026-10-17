@@ -72,11 +72,11 @@ footer {
     border: 1px solid rgba(150, 150, 150, 0.7);
     border-radius: 8px;
     transition: background-color 0.2s, color 0.2s;
-}
 
-.boton--reservar:hover {
-    background-color: rgba(255, 255, 255, 0.181);
-    color: var(--color-negro);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.181);
+        color: var(--color-negro);
+    }
 }
 
 .servicios__titulo {
@@ -98,11 +98,11 @@ footer {
     border-radius: 10px;
     box-shadow: var(--sombra-card);
     transition: transform 0.2s, box-shadow 0.2s;
-}
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+    }
 }
 
 .card__imagen {

@@ -203,10 +203,10 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: background-color 0.2s;
-}
 
-.lateral__continuar:hover {
-    background-color: rgb(190, 190, 190);
+    &:hover{
+         background-color: rgb(190, 190, 190);
+    }
 }
 
 @media (min-width: 1024px) {
