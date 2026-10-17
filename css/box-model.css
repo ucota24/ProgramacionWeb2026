@@ -83,7 +83,7 @@ footer {
     margin: 0;
     text-align: center;
     flex: 0 0 100%;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1rem + 1.5vw, 2rem);
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -239,10 +239,6 @@ footer {
     #servicios {
         padding: var(--espaciado-g) var(--espaciado-m);
         gap: var(--espaciado-m) var(--espaciado-eg);
-    }
- 
-    .servicios__titulo {
-        font-size: 2rem;
     }
  
     .card {
