@@ -73,6 +73,12 @@ body {
     color: inherit;
     text-decoration: none;
     padding: 8px 4px;
+    transition: opacity 0.2s;
+
+    &:hover,
+    &:focus-visible{
+        opacity: 0.5;
+    }
 }
 
 #reservar {
