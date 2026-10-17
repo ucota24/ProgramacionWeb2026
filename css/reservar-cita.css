@@ -39,6 +39,15 @@ main {
 .servicio__radio {
     position: absolute;
     opacity: 0;
+
+    &:checked + .servicio {
+        background-color: rgb(225, 225, 255);
+    }
+
+    &:focus-visible + .servicio {
+        outline: 3px solid cornflowerblue;
+        outline-offset: 2px;
+    }
 }
 
 .servicio {
@@ -54,13 +63,18 @@ main {
     border: 1px solid var(--color-negro);
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
+    transition: background-color 0.2s transform 0.2s;
 
-.servicio::after {
-    content: ">";
-    grid-area: flecha;
-    font-size: 1.3rem;
+    &:hover{
+        background-color: rgb(245, 245, 245);
+        transform: translate(4px);
+    }
+
+    &::after{
+        content:">";
+        grid-area: flecha;
+        font-size: 1.3rem;
+    }
 }
 
 .servicio__nombre {
@@ -77,19 +91,6 @@ main {
 .servicio__enlace {
     color: inherit;
     text-decoration: underline;
-}
-
-.servicio:hover {
-    background-color: rgb(245, 245, 245);
-}
-
-.servicio__radio:checked + .servicio {
-    background-color: rgb(225, 225, 225);
-}
-
-.servicio__radio:focus-visible + .servicio {
-    outline: 3px solid cornflowerblue;
-    outline-offset: 2px;
 }
 
 .panel__lateral {
@@ -118,6 +119,11 @@ main {
     display: block;
     width: 96px;
     border-radius: 24px;
+    transition: transform 0.2s;
+
+    &:hover{
+        transform: rotate(-4deg);
+    }
 }
 
 .barberia__nombre {

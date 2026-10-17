@@ -77,6 +77,7 @@ footer {
     &:focus-visible {
         background-color: rgba(255, 255, 255, 0.181);
         color: var(--color-negro);
+        transform: scale(1.06);
     }
 }
 
