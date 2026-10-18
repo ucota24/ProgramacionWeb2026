@@ -1,3 +1,22 @@
+/* ÍNDICE  (box-model.css)
+   1. Variables
+      1.1 Paleta clara (por defecto)
+      1.2 Paleta oscura (prefers-color-scheme)
+   2. Reset
+   3. Base móvil
+      3.1 Estructura general (body, header, main, footer)
+      3.2 Hero y botón
+      3.3 Servicios y tarjetas
+      3.4 Información de la barbería
+      3.5 Pie de página
+   4. Tablet (min-width: 768px)
+   5. Escritorio (min-width: 1024px)
+   6. Animaciones
+   7. Accesibilidad: reducir movimiento */
+
+/* 1. VARIABLES */
+
+/* 1.1 Paleta clara (por defecto) */
 :root{
     --espaciado-s: 16px;
     --espaciado-c: 24px;
@@ -31,10 +50,7 @@
     --sombra-panel: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* 1.2 Paleta oscura */
 @media (prefers-color-scheme: dark) {
     :root {
         --color-superficie: rgb(32, 32, 34);
@@ -53,8 +69,17 @@
     }
 }
 
-/*BASE MOVIL*/
 
+/* 2. RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 3. BASE MÓVIL */
+
+/* 3.1 Estructura general */
 body {
     display:grid;
     grid-template-columns: minmax(0, 1fr);
@@ -82,6 +107,7 @@ footer {
     border-top: 1px solid var(--color-linea-pie);
 }
 
+/* 3.2 Hero y botón */
 #reservar {
     margin-left: 0;
     width: 100%;
@@ -89,16 +115,7 @@ footer {
     text-align: center;
 }
 
-#servicios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: var(--espaciado-g) var(--espaciado-m);
-    gap: var(--espaciado-m);
-    background-color: var(--color-capa-servicios);
-}
-
-.boton--reservar {
+.boton {
     display: inline-block;
     margin-top: var(--espaciado-s);
     padding: 8px 30px;
@@ -113,9 +130,19 @@ footer {
     transition: background-color 0.2s, color 0.2s;
 }
 
-.boton--reservar:hover {
+.boton:hover {
     background-color: var(--color-boton-hover-fondo);
     color: var(--color-boton-hover-texto);
+}
+
+/* 3.3 Servicios y tarjetas */
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--espaciado-g) var(--espaciado-m);
+    gap: var(--espaciado-m);
+    background-color: var(--color-capa-servicios);
 }
 
 .servicios__titulo {
@@ -158,6 +185,7 @@ footer {
     font-size: 1.1rem;
 }
 
+/* 3.4 Información de la barbería */
 .info-barberia {
     display: grid;
     gap: var(--espaciado-m);
@@ -225,6 +253,7 @@ footer {
     object-fit: cover;
 }
 
+/* 3.5 Pie de página */
 .pie {
     background-color: var(--color-pie-fondo);
     color: var(--color-texto-principal);
@@ -267,7 +296,7 @@ footer {
 }
 
 
-/*BASE TABLET */
+/* 4. TABLET (min-width: 768px) */
 @media (min-width: 768px) {
     #reservar {
         width: 45%;
@@ -314,7 +343,8 @@ footer {
     }
 }
 
-/* BASE ESCRITORIO */
+
+/*  5. ESCRITORIO (min-width: 1024px) */
 @media (min-width: 1024px) {
     #reservar {
         margin-left: 57%;
@@ -327,7 +357,8 @@ footer {
     }
 }
 
-/* Animación del botón Reservar */
+
+/*  6. ANIMACIONES */
 
 @keyframes latido {
     0% { transform: scale(1); }
@@ -335,13 +366,17 @@ footer {
     100% { transform: scale(1);
     }
 }
-.boton--reservar {
+
+.boton boton--reservar {
     animation: latido 2s ease-in-out infinite;
 }
 
+/* 7. ACCESIBILIDAD: REDUCIR MOVIMIENTO */
+
 /* Reducir movimiento para quien lo pide en su sistema */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;

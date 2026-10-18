@@ -1,8 +1,21 @@
+/* ÍNDICE  (reservar.css)
+   1. Base de la página
+   2. Estructura principal
+   3. Lista de servicios
+   4. Panel lateral (barbería, resumen y botón continuar)
+   5. Escritorio (min-width: 1024px) */
+
+
+/* 1. BASE DE LA PÁGINA */
+
 body {
     display: block;
     background: var(--color-superficie);
     color: var(--color-texto-superficie);
 }
+
+
+/* 2. ESTRUCTURA PRINCIPAL */
 
 main {
     display: grid;
@@ -19,6 +32,9 @@ main {
     font-weight: 700;
     text-align: center;
 }
+
+
+/* 3. LISTA DE SERVICIOS */
 
 .reservar__lista {
     grid-area: lista;
@@ -89,6 +105,9 @@ main {
     outline: 3px solid var(--color-foco);
     outline-offset: 2px;
 }
+
+
+/* 4. PANEL LATERAL */
 
 .panel__lateral {
     grid-area: lateral;
@@ -188,7 +207,7 @@ main {
     vertical-align: middle;
 }
 
-.lateral__continuar {
+.panel__continuar {
     align-self: center;
     padding: 10px 48px;
     background-color: var(--color-panel);
@@ -203,10 +222,12 @@ main {
     transition: background-color 0.2s;
 }
 
-.lateral__continuar:hover {
+.panel__continuar:hover {
     background-color: var(--color-panel-hover);
 }
 
+
+/* 5. ESCRITORIO (min-width: 1024px) */
 @media (min-width: 1024px) {
     main {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

@@ -1,3 +1,16 @@
+/* ÍNDICE  (styles.css)
+   1. Fuentes (@font-face)
+   2. Base tipográfica
+   3. Menú de navegación
+   4. Hero (sección Reservar)
+   5. Tarjetas
+   6. Derechos
+   7. Tablet (min-width: 768px)
+    */
+
+
+/* 1. FUENTES */
+
 @font-face {
     font-family: Roboto_Condensed;
     src: url('../assets/fonts/Roboto_Condensed-Light.ttf');
@@ -31,11 +44,16 @@
 }
 
 
+/* 2. BASE TIPOGRÁFICA */
+
 body {
     background-color: var(--color-fondo-pagina);
     font-family: Roboto_Condensed, sans-serif;
     color: var(--color-texto-principal);
 }
+
+
+/* 3. MENÚ DE NAVEGACIÓN */
 
 .menu__titulo {
     font-size: clamp(1rem, 0.9rem + 1.5vw, 1.7rem);
@@ -75,6 +93,9 @@ body {
     padding: 8px 4px;
 }
 
+
+/* 4. HERO (SECCIÓN RESERVAR) */
+
 #reservar {
     color: var(--color-texto-principal);
     font-weight: 500;
@@ -100,12 +121,18 @@ body {
     transform: translateX(4px);
 } */
 
+
+/* 5. TARJETAS */
+
 .card {
     color: var(--color-texto-superficie);
     font-size: 1rem;
     font-weight: 500;
     text-align: left;
 }
+
+
+/* 6. DERECHOS */
 
 #derechos {
     color: var(--color-texto-principal);
@@ -114,14 +141,15 @@ body {
     text-align: center;
 }
 
-/* BASE TABLET EN ADELANTE*/
+
+/* 7. TABLET (min-width: 768px) */
 @media (min-width: 768px) {
     .menu__titulo {
         white-space: nowrap;
     }
  
     .menu__lista {
-        flex-direction: nowrap;
+        flex-wrap: nowrap;
     }
  
     .menu__lista li,
