@@ -6,4 +6,4 @@
 
 .boton--reservar:hover::after {
     transform: translateX(4px);
-} */.card{color:var(--color-texto-superficie);font-size:1rem;text-align:left}#derechos{font-size:.8rem;font-weight:300}@media (min-width:768px){.menu__titulo{white-space:nowrap}.menu__lista{flex-wrap:nowrap}.menu__lista li,.menu__lista li:first-child{flex:1}}
+} .card{color:var(--color-texto-superficie);font-size:1rem;text-align:left}#derechos{font-size:.8rem;font-weight:300}@media (min-width:768px){.menu__titulo{white-space:nowrap}.menu__lista{flex-wrap:nowrap}.menu__lista li,.menu__lista li:first-child{flex:1}}*/
