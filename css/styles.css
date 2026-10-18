@@ -32,9 +32,9 @@
 
 
 body {
-    background-color: rgba(36, 36, 36, 0.747);
+    background-color: var(--color-fondo-pagina);
     font-family: Roboto_Condensed, sans-serif;
-    color: var(--color-blanco);
+    color: var(--color-texto-principal);
 }
 
 .menu__titulo {
@@ -43,7 +43,7 @@ body {
 }
 
 .menu {
-    color: var(--color-blanco);
+    color: var(--color-texto-principal);
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
@@ -76,7 +76,7 @@ body {
 }
 
 #reservar {
-    color: var(--color-blanco);
+    color: var(--color-texto-principal);
     font-weight: 500;
 }
 
@@ -101,14 +101,14 @@ body {
 } */
 
 .card {
-    color: var(--color-negro);
+    color: var(--color-texto-superficie);
     font-size: 1rem;
     font-weight: 500;
     text-align: left;
 }
 
 #derechos {
-    color: var(--color-blanco);
+    color: var(--color-texto-principal);
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
@@ -129,10 +129,3 @@ body {
         flex: 1;
     }
 }
-
-
-
-
-
-
-

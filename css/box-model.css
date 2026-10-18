@@ -6,12 +6,51 @@
     --espaciado-eg: calc(var(--espaciado-g) * 1.5);
     --radio-borde: 9px;
     --sombra-card: 0 4px 12px rgba(0, 0, 0, 1);
-    --color-blanco: rgb(255, 255, 255);
-    --color-negro: rgb(0, 0, 0);
+    --color-texto-principal: rgb(255, 255, 255);
+    --color-superficie: rgb(255, 255, 255);
+    --color-texto-superficie: rgb(0, 0, 0);
+    --color-borde-superficie: rgba(0, 0, 0, 0.1);
+    --color-linea-titulo: rgb(0, 0, 0);
+    --color-capa-fondo: rgba(0, 0, 0, 0.7);
+    --color-capa-servicios: rgba(0, 0, 0, 0.6);
+    --color-pie-fondo: rgb(59, 61, 64);
+    --color-linea-pie: rgba(255, 255, 255, 0.3);
+    --color-boton-fondo: rgba(143, 143, 143, 0.945);
+    --color-boton-borde: rgba(150, 150, 150, 0.7);
+    --color-boton-hover-fondo: rgba(255, 255, 255, 0.181);
+    --color-boton-hover-texto: rgb(0, 0, 0);
+    --color-fondo-pagina: rgba(36, 36, 36, 0.747);
+    --color-borde-servicio: rgb(0, 0, 0);
+    --color-texto-secundario: rgb(110, 110, 110);
+    --color-servicio-hover: rgb(245, 245, 245);
+    --color-servicio-seleccionado: rgb(225, 225, 225);
+    --color-foco: cornflowerblue;
+    --color-panel: rgb(217, 217, 217);
+    --color-panel-hover: rgb(190, 190, 190);
+    --sombra-card-hover: 0 8px 20px rgba(0, 0, 0, 1);
+    --sombra-panel: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 * {
     box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-superficie: rgb(32, 32, 34);
+        --color-texto-superficie: rgb(240, 240, 240);
+        --color-borde-superficie: rgba(255, 255, 255, 0.15);
+        --color-linea-titulo: rgb(240, 240, 240);
+        --color-capa-fondo: rgba(0, 0, 0, 0.85);
+        --color-pie-fondo: rgb(18, 18, 20);
+        --color-boton-hover-texto: rgb(255, 255, 255);
+        --color-borde-servicio: rgb(240, 240, 240);
+        --color-texto-secundario: rgb(170, 170, 170);
+        --color-servicio-hover: rgb(48, 48, 52);
+        --color-servicio-seleccionado: rgb(64, 64, 70);
+        --color-panel: rgb(44, 44, 48);
+        --color-panel-hover: rgb(62, 62, 68);
+    }
 }
 
 /*BASE MOVIL*/
@@ -21,7 +60,7 @@ body {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "header" "main" "info-barberia" "footer";
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        linear-gradient(var(--color-capa-fondo), var(--color-capa-fondo)),
         url("../assets/img/fondo.jpg");
     background-size: cover;
     background-position: center;
@@ -40,7 +79,7 @@ main {
 
 footer {
     grid-area: footer;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid var(--color-linea-pie);
 }
 
 #reservar {
@@ -56,27 +95,27 @@ footer {
     justify-content: center;
     padding: var(--espaciado-g) var(--espaciado-m);
     gap: var(--espaciado-m);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--color-capa-servicios);
 }
 
 .boton--reservar {
     display: inline-block;
     margin-top: var(--espaciado-s);
     padding: 8px 30px;
-    background-color: rgba(143, 143, 143, 0.945);
-    color: var(--color-blanco);
+    background-color: var(--color-boton-fondo);
+    color: var(--color-texto-principal);
     font-weight: 300;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
-    border: 1px solid rgba(150, 150, 150, 0.7);
+    border: 1px solid var(--color-boton-borde);
     border-radius: 8px;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .boton--reservar:hover {
-    background-color: rgba(255, 255, 255, 0.181);
-    color: var(--color-negro);
+    background-color: var(--color-boton-hover-fondo);
+    color: var(--color-boton-hover-texto);
 }
 
 .servicios__titulo {
@@ -93,8 +132,8 @@ footer {
     flex: 1 1 280px;
     max-width: 306px;
     padding: var(--espaciado-s);
-    background-color: var(--color-blanco);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde-superficie);
     border-radius: 10px;
     box-shadow: var(--sombra-card);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -102,7 +141,7 @@ footer {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-card-hover);
 }
 
 .card__imagen {
@@ -127,7 +166,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "datos" "mapa";
     margin-top: 0px;
-    background-color: var(--color-blanco);
+    background-color: var(--color-superficie);
 }
 
 .info-barberia__titulo {
@@ -141,14 +180,14 @@ footer {
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: center;
-    color: var(--color-negro);
+    color: var(--color-texto-superficie);
 }
 
 .info-barberia__titulo::after {
     content: none;
     /*flex: 1;
     height: 1px;
-    background-color: var(--color-negro);*/
+    background-color: var(--color-linea-titulo);*/
 }
 
 .info-barberia__datos {
@@ -158,8 +197,8 @@ footer {
     justify-content: center;
     gap: var(--espaciado-s);
     padding: 15px;
-    color: var(--color-negro);
-    background-color: rgba(255, 255, 255, 1);
+    color: var(--color-texto-superficie);
+    background-color: var(--color-superficie);
     border-radius: var(--radio-borde);
 }
 
@@ -170,7 +209,7 @@ footer {
 .info-barberia__etiqueta {
     font-weight: 700;
     font-size: 1rem;
-    color: var(--color-negro);
+    color: var(--color-texto-superficie);
     display: block;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -187,8 +226,8 @@ footer {
 }
 
 .pie {
-    background-color: rgb(59, 61, 64);
-    color: var(--color-blanco);
+    background-color: var(--color-pie-fondo);
+    color: var(--color-texto-principal);
     text-align: center;
     padding: var(--espaciado-m);
 }
@@ -204,8 +243,8 @@ footer {
     margin: 0 0 var(--espaciado-c);
     padding: var(--espaciado-c) 0;
     list-style: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid var(--color-linea-pie);
+    border-bottom: 1px solid var(--color-linea-pie);
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -259,7 +298,7 @@ footer {
         content: "";
         flex: 1;
         height: 1px;
-        background-color: rgb(0, 0, 0);
+        background-color: var(--color-linea-titulo);
     }
  
     .pie__lista {
@@ -302,14 +341,10 @@ footer {
 
 /* Reducir movimiento para quien lo pide en su sistema */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before, *::after {
+    *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
 }
-
-
-
