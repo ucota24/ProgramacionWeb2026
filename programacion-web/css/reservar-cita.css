@@ -1,0 +1,220 @@
+
+
+body {
+    display: block;
+    background: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "titulo" "lista" "lateral";
+    gap: var(--espaciado-c);
+    padding: var(--espaciado-c) var(--espaciado-s) var(--espaciado-g);
+}
+
+.reservar__titulo {
+    grid-area: titulo;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.reservar__lista {
+    grid-area: lista;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reservar__item {
+    position: relative;
+}
+
+.servicio__radio {
+    position: absolute;
+    opacity: 0;
+}
+
+.servicio {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "nombre  flecha"
+        "detalle flecha";
+    align-items: center;
+    gap: 4px 16px;
+    padding: 12px 20px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-negro);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.servicio::after {
+    content: ">";
+    grid-area: flecha;
+    font-size: 1.3rem;
+}
+
+.servicio__nombre {
+    grid-area: nombre;
+    font-weight: 500;
+}
+
+.servicio__detalle {
+    grid-area: detalle;
+    color: rgb(110, 110, 110);
+    font-size: 0.9rem;
+}
+
+.servicio__enlace {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.servicio:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.servicio__radio:checked + .servicio {
+    background-color: rgb(225, 225, 225);
+}
+
+.servicio__radio:focus-visible + .servicio {
+    outline: 3px solid cornflowerblue;
+    outline-offset: 2px;
+}
+
+.panel__lateral {
+    grid-area: lateral;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-s);
+    width: 100%;
+    max-width: 360px;
+    justify-self: center;
+}
+
+.barberia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: var(--espaciado-c);
+    background-color: rgb(217, 217, 217);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.barberia__logo {
+    display: block;
+    width: 96px;
+    border-radius: 24px;
+}
+
+.barberia__nombre {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 8px 0 0;
+}
+
+.barberia__resenas {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.barberia__estrellas {
+    letter-spacing: 0.1em;
+    margin: 0 6px;
+}
+
+.barberia__direccion {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+}
+
+.barberia__direccion::before {
+    content: "📍";
+    margin-right: 6px;
+}
+
+.resumen {
+    padding: var(--espaciado-c);
+    background-color: rgb(217, 217, 217);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.resumen__titulo {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.resumen__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resumen__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.resumen__corte {
+    font-size: 0.95rem;
+}
+
+.resumen__detalle {
+    color: rgb(110, 110, 110);
+    font-size: 0.85rem;
+}
+
+.resumen__detalle::before {
+    content: "●";
+    margin-right: 6px;
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+
+.lateral__continuar {
+    align-self: center;
+    padding: 10px 48px;
+    background-color: rgb(217, 217, 217);
+    color: var(--color-negro);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lateral__continuar:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            "titulo titulo"
+            "lista  lateral";
+        padding: var(--espaciado-c) var(--espaciado-m) var(--espaciado-g);
+    }
+}
