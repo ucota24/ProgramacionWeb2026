@@ -1,4 +1,5 @@
-/* ÍNDICE  (box-model.css)
+/* 
+   ÍNDICE  (box-model.css)
    1. Variables
       1.1 Paleta clara (por defecto)
       1.2 Paleta oscura (prefers-color-scheme)
@@ -12,7 +13,9 @@
    4. Tablet (min-width: 768px)
    5. Escritorio (min-width: 1024px)
    6. Animaciones
-   7. Accesibilidad: reducir movimiento */
+   7. Accesibilidad: reducir movimiento
+    */
+
 
 /* 1. VARIABLES */
 
@@ -50,7 +53,7 @@
     --sombra-panel: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* 1.2 Paleta oscura */
+/* 1.2 Paleta oscura (solo redefine lo que cambia) */
 @media (prefers-color-scheme: dark) {
     :root {
         --color-superficie: rgb(32, 32, 34);
@@ -259,17 +262,20 @@ footer {
     color: var(--color-texto-principal);
     text-align: center;
     padding: var(--espaciado-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-c);
 }
 
 .pie__logo {
     border-radius: 15px;
     width: 150px;
     display: block;
-    margin: 0 auto 32px;
+    margin: 0 auto;
 }
 
 .pie__lista {
-    margin: 0 0 var(--espaciado-c);
+    margin: 0;
     padding: var(--espaciado-c) 0;
     list-style: none;
     border-top: 1px solid var(--color-linea-pie);
@@ -287,7 +293,7 @@ footer {
 .pie__texto {
     font-size: 0.9rem;
     font-weight: 300;
-    margin: 0 0 20px;
+    margin: 0;
 }
 
 .pie__item:not(:last-child)::after {
@@ -344,7 +350,7 @@ footer {
 }
 
 
-/*  5. ESCRITORIO (min-width: 1024px) */
+/* 5. ESCRITORIO (min-width: 1024px) */
 @media (min-width: 1024px) {
     #reservar {
         margin-left: 57%;
@@ -358,7 +364,7 @@ footer {
 }
 
 
-/*  6. ANIMACIONES */
+/* 6. ANIMACIONES */
 
 @keyframes latido {
     0% { transform: scale(1); }
@@ -367,9 +373,10 @@ footer {
     }
 }
 
-.boton boton--reservar {
+.boton--reservar {
     animation: latido 2s ease-in-out infinite;
 }
+
 
 /* 7. ACCESIBILIDAD: REDUCIR MOVIMIENTO */
 
