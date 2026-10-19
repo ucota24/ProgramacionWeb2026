@@ -63,11 +63,11 @@ main {
     border: 1px solid var(--color-negro);
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.2s transform 0.2s;
+    transition: background-color, 0.1s transform 0s;
 
     &:hover{
         background-color: rgb(245, 245, 245);
-        transform: translate(4px);
+        transform: translate(5px);
     }
 
     &::after{
