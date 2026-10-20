@@ -68,7 +68,7 @@ main {
     border: 1px solid var(--color-borde-servicio);
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color, 0.2s;
 }
 
 .servicio::after {
