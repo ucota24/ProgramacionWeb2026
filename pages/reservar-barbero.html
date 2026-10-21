@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../assets/icon/logo-2.jpg">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/box-model.css">
+    <link rel="stylesheet" href="../css/reservar-cita.css">
+
+    <title>Elegir Barbero | Pepe's Barberia</title>
+</head>
+
+<body>
+    <main>
+        <h1 class="reservar__titulo">Barberos Disponibles</h1>
+        <a class="reservar__flecha--regresar" href="reservar-cita.html" aria-label="Regresar a servicios"></a>
+
+        <ul class="reservar__lista reservar__lista--barberos">
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-angel-torres" name="barbero" value="angel-torres">
+                <label class="barbero" for="barbero-angel-torres">
+
+                    <img class="barbero__foto" src="../assets/img/barbero1.jpg" alt="Foto de Angel Torres">
+                    <span class="barbero__nombre">Angel Torres</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-roberto-aguilar" name="barbero" value="roberto-aguilar">
+                <label class="barbero" for="barbero-roberto-aguilar">
+
+                    <img class="barbero__foto" src="../assets/img/barbero2.jpg" alt="Foto de Roberto Aguilar">
+                    <span class="barbero__nombre">Roberto Aguilar</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-luna-ramirez" name="barbero" value="luna-ramirez">
+                <label class="barbero" for="barbero-luna-ramirez">
+
+                    <img class="barbero__foto" src="../assets/img/barbero3.jpg" alt="Foto de Luna Ramirez">
+                    <span class="barbero__nombre">Luna Ramirez</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-alexis-mendoza" name="barbero" value="alexis-mendoza">
+                <label class="barbero" for="barbero-alexis-mendoza">
+
+                    <img class="barbero__foto" src="../assets/img/barbero4.jpg" alt="Foto de Alexis Mendoza">
+                    <span class="barbero__nombre">Alexis Mendoza</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-victor-salgado" name="barbero" value="victor-salgado">
+                <label class="barbero" for="barbero-victor-salgado">
+
+                    <img class="barbero__foto" src="../assets/img/barbero5.jpg" alt="Foto de Victor Salgado">
+                    <span class="barbero__nombre">Victor Salgado</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+
+            <li class="reservar__item reservar__item--barbero">
+                <input class="barbero__radio" type="radio" id="barbero-mario-cardenas" name="barbero" value="mario-cardenas">
+                <label class="barbero" for="barbero-mario-cardenas">
+
+                    <img class="barbero__foto" src="../assets/img/barbero6.jpg" alt="Foto de Mario Cardenas">
+                    <span class="barbero__nombre">Mario Cardenas</span>
+                    <span class="barbero__info">Ver información</span>
+                </label>
+            </li>
+        </ul>
+
+        <aside class="panel__lateral">
+            <section class="barberia">
+                <img class="barberia__logo" src="../assets/icon/logo-2.jpg" alt="Logo de Pepe's Barberia">
+                <h2 class="barberia__nombre">Pepe's Barberia</h2>
+
+                <p class="barberia__resenas"> 4.7
+                    <span class="barberia__estrellas" role="img" aria-label="4.7 de 5 estrellas"></span>
+                    1,389 reseñas
+                </p>
+
+                <p class="barberia__direccion">Allende 1560, colonia Perla, C.P. 23040</p>
+            </section>
+
+            <section class="resumen">
+                <h2 class="resumen__titulo">Resumen</h2>
+
+                <ul class="resumen__lista">
+                    <li class="resumen__item">
+                        <span class="resumen__nombre">Victor Salgado</span>
+                        <span class="resumen__detalle">Barbero</span>
+                    </li>
+                </ul>
+            </section>
+
+            <button class="lateral__continuar" type="button">Continuar</button>
+        </aside>
+    </main>
+</body>
+</html>

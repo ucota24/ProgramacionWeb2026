@@ -20,6 +20,7 @@ main {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 1.3rem;
 }
 
 .reservar__lista {
@@ -63,7 +64,7 @@ main {
     border: 1px solid var(--color-negro);
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color, 0.1s transform 0s;
+    transition: background-color, 0.1s transform 0.1s;
 
     &:hover{
         background-color: rgb(245, 245, 245);
@@ -142,6 +143,10 @@ main {
     margin: 0 6px;
 }
 
+.barberia__estrellas::before {
+    content: "★★★★☆";
+}
+
 .barberia__direccion {
     margin: 8px 0 0;
     font-size: 0.85rem;
@@ -213,6 +218,90 @@ main {
     &:hover{
          background-color: rgb(190, 190, 190);
     }
+}
+
+.reservar__flecha--regresar {
+    grid-area: titulo;
+    justify-self: start;
+    align-self: center;
+    color: var(--color-negro);
+    font-size: 1.8rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateX(-4px);
+    }
+}
+
+.reservar__flecha--regresar::before {
+    content: "↩";
+}
+
+.reservar__lista--barberos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--espaciado-s);
+    max-width: 520px;
+}
+
+.reservar__item--barbero {
+    display: flex;
+    flex: 1 1 130px;
+    max-width: 160px;
+}
+
+.barbero__radio {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + .barbero {
+        background-color: rgb(225, 225, 255);
+    }
+
+    &:focus-visible + .barbero {
+        outline: 3px solid cornflowerblue;
+        outline-offset: 2px;
+    }
+}
+
+.barbero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: var(--espaciado-s);
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-negro);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s;
+
+    &:hover {
+        background-color: rgb(245, 245, 245);
+        transform: translateY(-4px);
+    }
+}
+
+.barbero__foto {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.barbero__nombre {
+    font-weight: 500;
+}
+
+.barbero__info {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: rgb(110, 110, 110);
 }
 
 @media (min-width: 1024px) {
