@@ -50,6 +50,22 @@ body {
     padding: 7px max(20px, 4vw);
 }
 
+.menu__boton {
+    top: 6px;
+    left: max(20px, 4vw);
+    padding: 4px 8px;
+    font-size: 1.6rem;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__boton::before {
+    content: "☰";
+}
+
 .menu__lista {
     display: flex;
     flex-wrap: wrap;
@@ -67,6 +83,14 @@ body {
 
 .menu__lista li {
     text-align: center;
+}
+
+.menu__lista li:not(:first-child) {
+    display: none;
+}
+
+.menu.abierto .menu__lista li:not(:first-child) {
+    display: block;
 }
 
 .menu__enlace {
@@ -133,6 +157,14 @@ body {
     .menu__lista li,
     .menu__lista li:first-child {
         flex: 1;
+    }
+
+    .menu__boton {
+        display: none;
+    }
+
+    .menu__lista li:not(:first-child) {
+        display: block;
     }
 }
 
