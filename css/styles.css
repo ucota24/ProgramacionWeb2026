@@ -32,7 +32,7 @@
 
 
 body {
-    background-color: rgba(36, 36, 36, 0.747);
+    background-color: var(--fondo-inicio);
     font-family: Roboto_Condensed, sans-serif;
     color: var(--color-blanco);
 }
@@ -64,6 +64,30 @@ body {
 
 .menu__boton::before {
     content: "☰";
+}
+
+.menu__tema {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    font-size: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.04);
+        box-shadow: 0 0 20px rgba(255,255,255,.3);
+    }
+}
+
+.menu__tema::before {
+    content: "⏾";
 }
 
 .menu__lista {
@@ -131,7 +155,7 @@ body {
 } */
 
 .card {
-    color: var(--color-negro);
+    color: var(--card-texto);
     font-size: 1rem;
     font-weight: 500;
     text-align: left;

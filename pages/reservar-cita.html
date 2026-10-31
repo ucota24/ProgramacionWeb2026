@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/box-model.css">
     <link rel="stylesheet" href="../css/reservar-cita.css">
+    <script src="../js/cambiar-tema.js" defer></script>
+    <script src="../js/buscador.js" defer></script> 
 
     <title>Elegir servicio | Pepe's Barberia</title>
 </head>
 
 <body>
-    <main>
+    <main class="main--buscador">
     <h1 class="reservar__titulo">Servicios Disponibles</h1>
     <a class="reservar__flecha--regresar" href="../index.html" aria-label="Regresar a servicios"></a>
+
+    <input class="reservar__buscador" 
+        type="text" id="buscador" placeholder="Buscar servicio..." aria-label="Buscar servicio">
 
     <ul class="reservar__lista">
 

@@ -8,6 +8,43 @@
     --sombra-card: 0 4px 12px rgba(0, 0, 0, 1);
     --color-blanco: rgb(255, 255, 255);
     --color-negro: rgb(0, 0, 0);
+
+    /*MODO CLARO*/
+    --fondo: var(--color-blanco);
+    --fondo-inicio: rgba(36, 36, 36, 0.747);
+    --panel: rgb(217, 217, 217);
+    --panel-hover: rgb(190, 190, 190);
+    --tarjeta: var(--color-blanco);
+    --tarjeta-hover: rgb(245, 245, 245);
+    --tarjeta-activa: rgb(225, 225, 255);
+    --texto: var(--color-negro);
+    --texto-suave: rgb(110, 110, 110);
+    --borde: var(--color-negro);
+
+    /*PAGINA PRICIPAL*/
+    --card-fondo: var(--color-blanco);
+    --card-texto: var(--color-negro);
+    --datos-fondo: var(--color-blanco);
+    --pie-fondo: rgb(59, 61, 64);
+
+}
+
+body.oscuro {
+    --fondo: rgb(59, 61, 64);
+    --fondo-inicio: rgb(59, 61, 64);
+    --panel: rgb(66, 68, 72);
+    --panel-hover: rgb(60, 60, 65);
+    --tarjeta: rgb(75, 77, 82);
+    --tarjeta-hover: rgb(45, 45, 48);
+    --tarjeta-activa: rgb(50, 50, 90);
+    --texto: var(--color-blanco);
+    --texto-suave: rgb(170, 170, 170);
+    --borde: var(--color-blanco);
+
+    --card-fondo: rgb(59, 61, 64);
+    --card-texto: var(--color-blanco);
+    --datos-fondo: transparent;
+    --pie-fondo: rgb(0, 0, 0);
 }
 
 * {
@@ -95,7 +132,7 @@ footer {
     flex: 1 1 280px;
     max-width: 306px;
     padding: var(--espaciado-s);
-    background-color: var(--color-blanco);
+    background-color: var(--card-fondo);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     box-shadow: var(--sombra-card);
@@ -129,7 +166,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "datos" "mapa";
     margin-top: 0px;
-    background-color: var(--color-blanco);
+    background-color: var(--card-fondo);
 }
 
 .info-barberia__titulo {
@@ -143,7 +180,7 @@ footer {
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: center;
-    color: var(--color-negro);
+    color: var(--card-texto);
 }
 
 .info-barberia__titulo::after {
@@ -160,8 +197,8 @@ footer {
     justify-content: center;
     gap: var(--espaciado-s);
     padding: 15px;
-    color: var(--color-negro);
-    background-color: rgba(255, 255, 255, 1);
+    color: var(--card-texto);
+    background-color: var(--datos-fondo);
     border-radius: var(--radio-borde);
 }
 
@@ -172,7 +209,7 @@ footer {
 .info-barberia__etiqueta {
     font-weight: 700;
     font-size: 1rem;
-    color: var(--color-negro);
+    color: var(--card-texto);
     display: block;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -189,7 +226,7 @@ footer {
 }
 
 .pie {
-    background-color: rgb(59, 61, 64);
+    background-color: var(--pie-fondo);
     color: var(--color-blanco);
     text-align: center;
     padding: var(--espaciado-m);
@@ -261,7 +298,7 @@ footer {
         content: "";
         flex: 1;
         height: 1px;
-        background-color: rgb(0, 0, 0);
+        background-color: var(--card-texto);
     }
  
     .pie__lista {
