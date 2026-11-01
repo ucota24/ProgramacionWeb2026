@@ -53,13 +53,22 @@ body.oscuro {
 
 /*BASE MOVIL*/
 
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../assets/img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
 body {
     display:grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "header" "main" "info-barberia" "footer";
-    background-image: 
+    /*background-image: 
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../assets/img/fondo.jpg");
+        url("../assets/img/fondo.jpg");*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,7 +92,7 @@ footer {
 #reservar {
     margin-left: 0;
     width: 100%;
-    padding: 120px var(--espaciado-s) 200px;
+    padding: 120px var(--espaciado-s) 100px;
     text-align: center;
 }
 
@@ -93,7 +102,7 @@ footer {
     justify-content: center;
     padding: var(--espaciado-g) var(--espaciado-m);
     gap: var(--espaciado-m);
-    background-color: rgba(0, 0, 0, 0.6);
+    /*background-color: rgba(0, 0, 0, 0.6);*/
 }
 
 .boton--reservar {
@@ -272,7 +281,7 @@ footer {
     #reservar {
         width: 45%;
         margin-left: 45%;
-        padding: 150px 10px 300px;
+        padding: 150px 10px 120px;
     }
  
     #servicios {
@@ -317,9 +326,9 @@ footer {
 /* BASE ESCRITORIO */
 @media (min-width: 1024px) {
     #reservar {
-        margin-left: 57%;
-        width: 28%;
-        padding: 188px 10px 400px;
+        margin-left: 59%;
+        width: 25%;
+        padding: 188px 10px 300px;
     }
  
     .info-barberia {

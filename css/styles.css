@@ -32,9 +32,9 @@
 
 
 body {
-    background-color: var(--fondo-inicio);
+    background-color: var(--fondo);
     font-family: Roboto_Condensed, sans-serif;
-    color: var(--color-blanco);
+    color: var(--texto);
 }
 
 .menu__titulo {
