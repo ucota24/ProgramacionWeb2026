@@ -56,7 +56,7 @@ body.oscuro {
 .hero {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../assets/img/fondo.jpg");
+        url("../assets/img/fondo-cafe.jpg");
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -94,6 +94,60 @@ footer {
     width: 100%;
     padding: 120px var(--espaciado-s) 100px;
     text-align: center;
+}
+
+.pasos {
+    padding: var(--espaciado-m) var(--espaciado-m) var(--espaciado-eg);
+    text-align: center;
+}
+
+.pasos__icono {
+    display: block;
+    width: 80px;
+    margin: 0 auto var(--espaciado-s);
+}
+
+.pasos__titulo {
+    font-size: clamp(1rem, 1rem + 1.5vw, 2rem);
+    font-weight: 700;
+    margin: 0 0 var(--espaciado-s);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.pasos__subtitulo {
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+    margin: 0 0 var(--espaciado-g);
+}
+
+.pasos__lista {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espaciado-m);
+    list-style: none;
+}
+
+.pasos__numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: var(--espaciado-s);
+
+}
+
+.pasos__nombre {
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+}
+
+.pasos__item p {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    margin: 0;
+
 }
 
 #servicios {
@@ -142,8 +196,8 @@ footer {
     max-width: 306px;
     padding: 0;
     background-color: var(--card-fondo);
-    border-radius: 10px;
-    box-shadow: var(--sombra-card);
+    border-radius: 1px;
+    /*box-shadow: var(--sombra-card);*/
     height: min(340px, 100vw);
     overflow: hidden;
     position: relative;
@@ -288,6 +342,10 @@ footer {
         margin-left: 45%;
         padding: 150px 10px 120px;
     }
+
+    .pasos__lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
  
     #servicios {
         padding: var(--espaciado-g) var(--espaciado-m);
@@ -334,6 +392,10 @@ footer {
         margin-left: 59%;
         width: 25%;
         padding: 188px 10px 300px;
+    }
+
+    .pasos__lista {
+        grid-template-columns: repeat(3, 1fr);
     }
  
     .info-barberia {
