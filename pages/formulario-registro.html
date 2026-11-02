@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../assets/icon/logo.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/box-model.css">
+    <link rel="stylesheet" href="../css/formulario-registro.css">
+
+    <title>Barbas Barberia | Registro</title>
+</head>
+
+<body>
+    <main>        
+        <h1 class="registro__titulo">Crea tu cuenta</h1>
+        <a class="reservar__flecha--regresar" href="../index.html" aria-label="Regresar al inicio"></a>
+        <p class="registro__subtitulo">Regístrate para reservar tus citas en minutos.</p>
+        
+        <form class="registro" method="POST">
+
+            <div class="registro__campo">
+                <label class="registro__etiqueta" for="nombre">Nombre</label>
+                <input class="registro__entrada" type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="registro__campo">
+                <label class="registro__etiqueta" for="correo">Correo electrónico</label>
+                <input class="registro__entrada" type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="registro__campo">
+                <label class="registro__etiqueta" for="contrasena">Contraseña</label>
+                <input class="registro__entrada" type="password" id="contrasena" name="contrasena" minlength="8" required>
+            </div>
+
+            <div class="registro__campo">
+                <label class="registro__etiqueta" for="telefono">Teléfono</label>
+                <input class="registro__entrada" type="tel" id="telefono" name="telefono" required>
+            </div>
+            
+            <button class="registro__boton" type="submit">Confirmar</button>
+
+        </form>
+    </main>
+
+
+
+</body>
+
+</html>

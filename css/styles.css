@@ -121,11 +121,13 @@ body {
     color: inherit;
     text-decoration: none;
     padding: 8px 4px;
-    transition: opacity 0.2s;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s, color 0.3s;
 
     &:hover,
     &:focus-visible{
-        opacity: 0.5;
+        border-bottom-color: var(--color-cafe);
+        color: var(--color-cafe);
     }
 }
 
@@ -166,6 +168,21 @@ body {
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
+}
+
+.reservar__flecha--regresar {
+    font-size: 1.8rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateX(-4px);
+    }
+}
+
+.reservar__flecha--regresar::before {
+    content: "↩";
 }
 
 /* BASE TABLET EN ADELANTE*/

@@ -247,18 +247,6 @@ main {
     justify-self: start;
     align-self: center;
     color: var(--texto);
-    font-size: 1.8rem;
-    line-height: 1;
-    text-decoration: none;
-    transition: transform 0.2s;
-
-    &:hover {
-        transform: translateX(-4px);
-    }
-}
-
-.reservar__flecha--regresar::before {
-    content: "↩";
 }
 
 .reservar__lista--barberos {

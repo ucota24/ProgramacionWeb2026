@@ -8,6 +8,7 @@
     --sombra-card: 0 4px 12px rgba(0, 0, 0, 1);
     --color-blanco: rgb(255, 255, 255);
     --color-negro: rgb(0, 0, 0);
+    --color-cafe: rgb(137, 128, 116);
 
     /*MODO CLARO*/
     --fondo: var(--color-blanco);
@@ -294,7 +295,9 @@ footer {
 }
 
 .pie {
-    background-color: var(--pie-fondo);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../assets/img/fondo-cafe.jpg");
     color: var(--color-blanco);
     text-align: center;
     padding: var(--espaciado-m);
