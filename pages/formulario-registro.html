@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/box-model.css">
     <link rel="stylesheet" href="../css/formulario-registro.css">
+    <script type="module" src="../js/main.js"></script>
 
     <title>Barbas Barberia | Registro</title>
 </head>
@@ -17,26 +18,31 @@
         <a class="reservar__flecha--regresar" href="../index.html" aria-label="Regresar al inicio"></a>
         <p class="registro__subtitulo">Regístrate para reservar tus citas en minutos.</p>
         
-        <form class="registro" method="POST">
+        <form class="registro" id="form-registro" action="#" method="POST" novalidate>
 
             <div class="registro__campo">
                 <label class="registro__etiqueta" for="nombre">Nombre</label>
                 <input class="registro__entrada" type="text" id="nombre" name="nombre" required>
+                <span class="registro__error" data-error-para="nombre"></span>
             </div>
 
             <div class="registro__campo">
                 <label class="registro__etiqueta" for="correo">Correo electrónico</label>
                 <input class="registro__entrada" type="email" id="correo" name="correo" required>
+                <span class="registro__error" data-error-para="correo"></span>
             </div>
 
             <div class="registro__campo">
                 <label class="registro__etiqueta" for="contrasena">Contraseña</label>
-                <input class="registro__entrada" type="password" id="contrasena" name="contrasena" minlength="8" required>
+                <input class="registro__entrada" type="password" id="contrasena" name="contrasena" 
+                    minlength="8" required>
+                <span class="registro__error" data-error-para="contrasena"></span>
             </div>
 
             <div class="registro__campo">
                 <label class="registro__etiqueta" for="telefono">Teléfono</label>
                 <input class="registro__entrada" type="tel" id="telefono" name="telefono" required>
+                <span class="registro__error" data-error-para="telefono"></span>
             </div>
             
             <button class="registro__boton" type="submit">Confirmar</button>
