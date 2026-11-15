@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/reservar-cita.css">
     <script src="../js/cambiar-tema.js" defer></script>
     <script src="../js/buscador.js" defer></script> 
+    <script type="module" src="../js/reservar.js"></script>
 
     <title>Elegir servicio | Pepe's Barberia</title>
 </head>
@@ -21,72 +22,7 @@
     <input class="reservar__buscador" 
         type="text" id="buscador" placeholder="Buscar servicio..." aria-label="Buscar servicio">
 
-    <ul class="reservar__lista">
-
-        <li class="reservar__item">
-            <input class="servicio__radio" type="radio" id="servicio-corte-normal" name="servicio" value="corte-normal">
-            <label class="servicio" for="servicio-corte-normal">
-                <span class="servicio__nombre">Corte normal</span>
-                <span class="servicio__detalle">45 minutos | 250 $</span>
-            </label>
-        </li>
-        
-        <li class="reservar__item">
-            <input class="servicio__radio" type="radio" id="servicio-arreglo-barba" name="servicio" value="arreglo-barba">
-            <label class="servicio" for="servicio-arreglo-barba">
-                <span class="servicio__nombre">Arreglo de barba</span>
-                <span class="servicio__detalle">30 minutos | 200 $</span>
-            </label>
-        </li>
-
-        <li class="reservar__item">
-            <input class="servicio__radio" type="radio" id="servicio-corte-nino" name="servicio" value="corte-nino">
-            <label class="servicio" for="servicio-corte-nino">
-                <span class="servicio__nombre">Corte de niño</span>
-                <span class="servicio__detalle">30 minutos | 150 $</span>
-            </label>
-        </li>
-
-        <li class="reservar__item">
-                <input class="servicio__radio" type="radio" id="servicio-mascara-negra" name="servicio" value="mascara-negra">
-                <label class="servicio" for="servicio-mascara-negra">
-                    <span class="servicio__nombre">Mascara negra</span>
-                    <span class="servicio__detalle">15 minutos | 100 $</span>
-                </label>
-            </li>
-
-            <li class="reservar__item">
-                <input class="servicio__radio" type="radio" id="servicio-exfoliacion-facial" name="servicio" value="exfoliacion-facial">
-                <label class="servicio" for="servicio-exfoliacion-facial">
-                    <span class="servicio__nombre">Exfoliación facial</span>
-                    <span class="servicio__detalle">15 minutos | 200 $</span>
-                </label>
-            </li>
-
-            <li class="reservar__item">
-                <input class="servicio__radio" type="radio" id="servicio-corte-barba" name="servicio" value="corte-barba">
-                <label class="servicio" for="servicio-corte-barba">
-                    <span class="servicio__nombre">Corte normal + Arreglo de barba</span>
-                    <span class="servicio__detalle">1 hora 15 minutos | 420 $</span>
-                </label>
-            </li>
-
-            <li class="reservar__item">
-                <input class="servicio__radio" type="radio" id="servicio-corte-mascara" name="servicio" value="corte-mascara">
-                <label class="servicio" for="servicio-corte-mascara">
-                    <span class="servicio__nombre">Corte normal + Mascara negra</span>
-                    <span class="servicio__detalle">1 hora 15 minutos | 350 $</span>
-                </label>
-            </li>
-
-            <li class="reservar__item">
-                <input class="servicio__radio" type="radio" id="servicio-paquete-pepes" name="servicio" value="paquete-pepes">
-                <label class="servicio" for="servicio-paquete-pepes">
-                    <span class="servicio__nombre">Paquete Pepe's</span>
-                    <span class="servicio__detalle">1 hora 30 minutos | 500 $ | <a class="servicio__enlace" href="#">Detalles</a></span>
-                </label>
-            </li>
-        </ul>
+    <ul class="reservar__lista" id="servicios-lista"></ul>
 
     <aside class="panel__lateral">
         <section class="barberia">
@@ -104,17 +40,23 @@
         <section class="resumen">
             <h2 class="resumen__titulo">Resumen</h2>
 
-            <ul class="resumen__lista">
-                 <li class="resumen__item">
-                    <span class="resumen__corte">Corte Normal</span>
-                    <span class="resumen__detalle">45 minutos | 250 $</span>
-                </li>
-            </ul>
+            <ul class="resumen__lista" id="resumen-lista"></ul>
          </section>
          <button class="lateral__continuar" type="button">Continuar</button>
 
     </aside>
-    
+
     </main>
+
+    <template id="tpl-servicio">
+        <li class="reservar__item">
+            <input class="servicio__radio" type="radio" name="servicio">
+            <label class="servicio">
+                <span class="servicio__nombre"></span>
+                <span class="servicio__detalle"></span>
+            </label>
+        </li>
+    </template>
+
 </body>
 </html>

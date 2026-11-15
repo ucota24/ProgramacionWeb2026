@@ -314,6 +314,10 @@ main {
     color: var(--texto-suave);
 }
 
+.reservar__estado {
+    color: var(--texto-suave);
+}
+
 @media (min-width: 1024px) {
     main {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
