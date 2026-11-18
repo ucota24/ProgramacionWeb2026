@@ -1,0 +1,37 @@
+[
+    { 
+        "id": "angel-torres", 
+        "nombre": "Angel Torres", 
+        "foto": "barbero1.jpg" 
+    },
+
+    { 
+        "id": "roberto-aguilar", 
+        "nombre": "Roberto Aguilar", 
+        "foto": "barbero2.jpg" 
+    },
+
+    { 
+        "id": "luna-ramirez", 
+        "nombre": "Luna Ramirez", 
+        "foto": "barbero3.jpg" 
+    },
+
+    { 
+        "id": "alexis-mendoza", 
+        "nombre": "Alexis Mendoza", 
+        "foto": "barbero4.jpg" 
+    },
+
+    { 
+        "id": "victor-salgado", 
+        "nombre": "Victor Salgado", 
+        "foto": "barbero5.jpg" 
+    },
+
+    { 
+        "id": "mario-cardenas", 
+        "nombre": "Mario Cardenas", 
+        "foto": "barbero6.jpg" 
+    }
+]

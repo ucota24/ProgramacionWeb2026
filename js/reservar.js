@@ -83,6 +83,8 @@ botonContinuar.addEventListener("click", () => {
             title: "Elige un servicio",
             text: "Selecciona un servicio para poder continuar.",
         });
+    } else {
+        window.location.href = "reservar-barbero.html";
     }
 });
 
