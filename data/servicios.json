@@ -10,7 +10,7 @@
         "duracion": "30 minutos", 
         "precio": 200 
     },
-
+  
     { "id": "corte-nino", 
         "nombre": "Corte de niño", 
         "duracion": "30 minutos", 

@@ -48,6 +48,30 @@
 
     </main>
 
+    <section class="nuevo">
+        <h2 class="nuevo__titulo">Agregar servicio</h2>
+        
+        <form id="form-nuevo">
+            <div class="nuevo__campo">
+                <label class="nuevo__etiqueta" for="nuevo-nombre">Nombre</label>
+                <input class="nuevo__entrada" type="text" id="nuevo-nombre" name="nombre">
+            </div>
+
+            <div class="nuevo__campo">
+                <label class="nuevo__etiqueta" for="nuevo-duracion">Duración</label>
+                <input class="nuevo__entrada" type="text" id="nuevo-duracion" name="duracion" placeholder="30 minutos">
+            </div>
+
+            <div class="nuevo__campo">
+                <label class="nuevo__etiqueta" for="nuevo-precio">Precio</label>
+                <input class="nuevo__entrada" type="number" id="nuevo-precio" name="precio">
+            </div>
+            
+            <span class="nuevo__error" id="nuevo-error"></span>
+            <button class="lateral__continuar" type="submit">Agregar</button>
+        </form>
+    </section>
+
     <template id="tpl-servicio">
         <li class="reservar__item">
             <input class="servicio__radio" type="radio" name="servicio">

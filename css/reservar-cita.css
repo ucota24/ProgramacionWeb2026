@@ -318,6 +318,45 @@ main {
     color: var(--texto-suave);
 }
 
+.nuevo {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: var(--espaciado-c) var(--espaciado-s) var(--espaciado-g);
+}
+
+.nuevo__titulo {
+    margin: 0 0 var(--espaciado-s);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.nuevo__campo {
+    margin-bottom: var(--espaciado-s);
+}
+
+.nuevo__etiqueta {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.nuevo__entrada {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--texto);
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.nuevo__error {
+    display: block;
+    margin-bottom: var(--espaciado-s);
+    color: rgb(200, 50, 50);
+}
+
 @media (min-width: 1024px) {
     main {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

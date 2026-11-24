@@ -3,6 +3,10 @@ import Swal from "../node_modules/sweetalert2/dist/sweetalert2.esm.all.js";
 const lista = document.querySelector("#servicios-lista");
 const plantilla = document.querySelector("#tpl-servicio");
 const resumenLista = document.querySelector("#resumen-lista");
+const formNuevo = document.querySelector("#form-nuevo");
+const errorNuevo = document.querySelector("#nuevo-error");
+
+let servicios = [];
 
 const mostrarEstado = (mensaje) => {
     const item = document.createElement("li");
@@ -19,7 +23,7 @@ const renderServicios = (servicios) => {
 
         radio.id = `servicio-${s.id}`;
         radio.value = s.id;
-        etiqueta.setAttribute("for", `servicio-${s.id}`);
+        etiqueta.htmlFor = `servicio-${s.id}`;
         clon.querySelector(".servicio__nombre").textContent = s.nombre;
         clon.querySelector(".servicio__detalle").textContent = `${s.duracion} | ${s.precio} $`;
 
@@ -47,13 +51,9 @@ const cargarServicios = async () => {
     mostrarEstado("Cargando servicios...");
 
     try {
-        const respuesta = await fetch("../data/servicios.json");
-
-        if (!respuesta.ok) {
-            throw new Error(`Error HTTP ${respuesta.status}: no fue posible cargar los servicios.`);
-        }
-
-        const servicios = await respuesta.json();
+        const respuesta = await fetch("../api/servicios.php");
+        if (!respuesta.ok) throw new Error("No se pudo leer la API");
+        servicios = await respuesta.json();
 
         lista.replaceChildren();
         renderServicios(servicios);
@@ -62,17 +62,44 @@ const cargarServicios = async () => {
         if (guardado) {
             lista.querySelector(`#servicio-${guardado.id}`).checked = true;
             renderResumen(guardado);
+            }
+        } catch (error) {
+            mostrarEstado("No se pudieron cargar los servicios. Intentalo ms tarde.");
+        }
+};
+
+lista.addEventListener("change", (evento) => {
+    const elegido = servicios.find((s) => s.id === evento.target.value);
+    renderResumen(elegido);
+    localStorage.setItem("servicio", JSON.stringify(elegido));
+});
+
+formNuevo.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorNuevo.textContent = "";
+
+    const datos = Object.fromEntries(new FormData(formNuevo));
+    datos.precio = Number(datos.precio);
+
+    try {
+        const respuesta = await fetch("../api/servicios.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos),
+        });
+        const resultado = await respuesta.json();
+
+        if (!respuesta.ok) {
+            errorNuevo.textContent = resultado.error;
+            return;
         }
 
-        lista.addEventListener("change", (evento) => {
-            const elegido = servicios.find((s) => s.id === evento.target.value);
-            renderResumen(elegido);
-            localStorage.setItem("servicio", JSON.stringify(elegido));
-        });
+        formNuevo.reset();
+        cargarServicios();
     } catch (error) {
-        mostrarEstado("No se pudieron cargar los servicios. Intentalo ms tarde.");
+        errorNuevo.textContent = "No se pudo conectar con el servidor. Intenta de nuevo.";
     }
-};
+});
 
 const botonContinuar = document.querySelector(".lateral__continuar");
 
