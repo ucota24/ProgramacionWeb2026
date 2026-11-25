@@ -69,7 +69,7 @@ const cargarServicios = async () => {
 };
 
 lista.addEventListener("change", (evento) => {
-    const elegido = servicios.find((s) => s.id === evento.target.value);
+    const elegido = servicios.find((s) => String(s.id) === evento.target.value);
     renderResumen(elegido);
     localStorage.setItem("servicio", JSON.stringify(elegido));
 });

@@ -1,0 +1,19 @@
+GET http://localhost:8000/api/servicios.php
+
+###
+GET http://localhost:8000/api/servicios.php?id=1
+
+###
+POST http://localhost:8000/api/servicios.php
+Content-Type: application/json
+
+{ "nombre": "Corte fade", "duracion": "40 minutos", "precio": 280 }
+
+###
+PUT http://localhost:8000/api/servicios.php?id=1
+Content-Type: application/json
+
+{ "nombre": "Corte normal", "duracion": "45 minutos", "precio": 260 }
+
+###
+DELETE http://localhost:8000/api/servicios.php?id=9
